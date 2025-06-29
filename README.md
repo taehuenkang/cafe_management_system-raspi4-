@@ -46,6 +46,13 @@ It detects spills, lost items (phone, wallet), and displays real-time monitoring
 
 ---
 
+🔗 Links
+🧠 YOLOv5 Training Config
+
+🧪 Dataset & Label Format (YOLO txt)
+
+📽️ Demo Video
+
 ## 🌐 Web Interface
 
 - Displays bounding boxes with class labels
