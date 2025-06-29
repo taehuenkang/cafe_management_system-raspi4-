@@ -1,15 +1,63 @@
-# cafe_management_system-raspi4-
-cafe_management_system(raspi4)
+# ☕ Cafe Management System – AI CCTV with YOLOv5 on Raspberry Pi
 
-<How to use>
-1.making custom dataset
-we get data in kaggle,robowflow
-if you want to change class->plz change data.yaml file
-2.make weight file
-finally, we select stain,bag,coffee_cup,wallet class and train by train.py
-result is final_best.pt
-3.Activate
-you can download this file in raspi4
-you must install some library like virtual environments
-4.Fianl
-activate app.py
+AI-enabled smart surveillance system designed for unmanned cafés.  
+It detects spills, lost items (phone, wallet), and displays real-time monitoring.
+
+---
+
+## 📌 Project Overview
+
+- 📷 Real-time object detection using **YOLOv5 (custom-trained)**  
+- 🧪 Recognizes: `coffee_cup`, `wallet`, `phone`, `spills`  
+- 🖥️ Web dashboard via **Flask** to display live video & status  
+- 🍓 Hardware: **Raspberry Pi 4**, PiCamera2
+
+---
+
+## 🧰 Tech Stack
+
+| Component     | Tools / Frameworks                      |
+|---------------|------------------------------------------|
+| AI Model      | YOLOv5 (PyTorch)                         |
+| Backend       | Flask, OpenCV                            |
+| Device        | Raspberry Pi 4, PiCamera2                |
+| Labeling      | Roboflow, LabelImg                       |
+| Language      | Python                                   |
+
+---
+
+## 🧠 Key Features
+
+- 👁️ Live object detection streamed via Flask (MJPEG)
+- 🧼 Spill detection with size threshold alert
+- 🔒 Lost item snapshot auto-save (every 10s)
+- 📦 Lightweight enough to run on Pi (option to scale to Jetson)
+
+---
+
+## 🖼️ Model Info
+
+| Metric     | Value      |
+|------------|------------|
+| mAP@0.5    | 97.2%      |
+| F1 Score   | 0.95       |
+| Precision  | 99.6%      |
+| Classes    | 4          |
+
+---
+
+## 🌐 Web Interface
+
+- Displays bounding boxes with class labels
+- Status panel for:
+  - Detected spills
+  - Saved snapshots with timestamps
+
+---
+
+## 🧪 How to Run
+
+```bash
+git clone https://github.com/SoCafeManager/Management-of-unmanned-cafes.git
+cd cafe_project/
+python3 app.py
